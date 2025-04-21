@@ -1,0 +1,124 @@
+INFO:     Started server process [3964]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3964]
+INFO:     Started server process [2117]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.196:59946 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.196:59946 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.196:59946 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.196:59946 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.0.199:56512 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.168.0.199:56512 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.0.199:41062 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:37814 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43300 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:51842 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:45288 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:50446 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:40576 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:53770 - "POST /upload HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2117]
+INFO:     Started server process [1978]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.199:59636 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:39312 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:35376 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:36732 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43164 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:42832 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.199:56956 - "POST /upload HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1978]
+Traceback (most recent call last):
+  File "/home/alan/alan/.local/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alan/alan/cloud_backend/main.py", line 32, in <module>
+    def list_files(request: Request) -> List[str]:
+NameError: name 'Request' is not defined
+INFO:     Started server process [1938]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.196:57749 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57749 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57862 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57865 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57870 - "GET /media/VID_20250401_022137_943.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57868 - "GET /media/SmartSelect_20250326_112009_Gallery.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57869 - "GET /media/VID_20250401_022137_943.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/SmartSelect_20250326_112009_Gallery.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57871 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57873 - "GET /media/20250401_122826.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/IMG_20250404_171213_092.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/SmartSelect_20250404_171200.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/IMG-20250223-WA0000.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/Screenshot_20250331_205759_galleryAI_diplom.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/YA.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/20250304_151634.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57873 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57868 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57871 - "GET /media/20250401_122826.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/IMG_20250404_171213_092.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/SmartSelect_20250404_171200.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/IMG-20250223-WA0000.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57867 - "GET /media/Screenshot_20250331_205759_galleryAI_diplom.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57870 - "GET /media/YA.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57870 - "GET /media/20250304_151634.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57873 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57874 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57883 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57884 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 206 Partial Content
+INFO:     192.168.0.196:57884 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 206 Partial Content
+INFO:     192.168.0.196:57913 - "GET /media HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [1938]
