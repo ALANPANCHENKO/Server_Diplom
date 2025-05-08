@@ -122,3 +122,290 @@ INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
 INFO:     Finished server process [1938]
+Traceback (most recent call last):
+  File "/home/alan/alan/.local/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    raise exc from None
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alan/alan/cloud_backend/main.py", line 6, in <module>
+    from database import Base, engine
+  File "/home/alan/alan/cloud_backend/database.py", line 1, in <module>
+    from sqlalchemy import create_engine
+ModuleNotFoundError: No module named 'sqlalchemy'
+Traceback (most recent call last):
+  File "/home/alan/alan/.local/bin/uvicorn", line 8, in <module>
+    sys.exit(main())
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1128, in __call__
+    return self.main(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1053, in main
+    rv = self.invoke(ctx)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 1395, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/usr/lib/python3/dist-packages/click/core.py", line 754, in invoke
+    return __callback(*args, **kwargs)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/main.py", line 412, in main
+    run(
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 70, in serve
+    await self._serve(sockets)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/server.py", line 77, in _serve
+    config.load()
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/config.py", line 435, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    raise exc from None
+  File "/home/alan/alan/.local/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/alan/alan/cloud_backend/main.py", line 6, in <module>
+    from database import Base, engine
+  File "/home/alan/alan/cloud_backend/database.py", line 1, in <module>
+    from sqlalchemy import create_engine
+ModuleNotFoundError: No module named 'sqlalchemy'
+INFO:     Started server process [6214]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.196:63817 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.196:63817 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.196:63988 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64177 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64200 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64237 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64245 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64257 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6214]
+INFO:     Started server process [6267]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.196:64379 - "GET /media HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6267]
+INFO:     Started server process [6299]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.196:64484 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64492 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64493 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64494 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64495 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64496 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     192.168.0.196:64497 - "POST /register HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6299]
+INFO:     Started server process [6370]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.0.196:65077 - "POST /register HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:65092 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:65100 - "POST /register HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:65152 - "POST /register HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:65188 - "POST /register HTTP/1.1" 200 OK
+INFO:     192.168.0.196:65190 - "POST /register HTTP/1.1" 400 Bad Request
+INFO:     192.168.0.196:65195 - "POST /register HTTP/1.1" 400 Bad Request
+INFO:     192.168.0.196:65197 - "POST /register HTTP/1.1" 400 Bad Request
+INFO:     192.168.0.196:65215 - "POST /register HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:65241 - "POST /login HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:65243 - "POST /login HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:65253 - "POST /register HTTP/1.1" 200 OK
+INFO:     192.168.0.196:65316 - "POST /login HTTP/1.1" 422 Unprocessable Entity
+INFO:     Started server process [6668]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [6677]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     192.168.0.196:54429 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.196:54429 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.168.0.196:54429 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58403 - "POST /register HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:58410 - "POST /register HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58555 - "POST /login HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:58557 - "POST /login HTTP/1.1" 422 Unprocessable Entity
+INFO:     192.168.0.196:58591 - "POST /register HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58604 - "POST /login HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58605 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58607 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/SmartSelect_20250326_112009_Gallery.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58608 - "GET /media/SmartSelect_20250326_112009_Gallery.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58606 - "GET /media/VID_20250401_022137_943.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58610 - "GET /media/20250401_122826.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/IMG_20250404_171213_092.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/SmartSelect_20250404_171200.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/IMG-20250223-WA0000.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/Screenshot_20250331_205759_galleryAI_diplom.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/YA.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/20250304_151634.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58610 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58607 - "GET /media/VID_20250401_022137_943.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58608 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58609 - "GET /media/20250401_122826.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58610 - "GET /media/IMG_20250404_171213_092.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58610 - "GET /media/SmartSelect_20250404_171200.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58610 - "GET /media/IMG-20250223-WA0000.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58610 - "GET /media/Screenshot_20250331_205759_galleryAI_diplom.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58606 - "GET /media/YA.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58606 - "GET /media/20250304_151634.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58614 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58615 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58617 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58620 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58656 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58657 - "GET /media/1e047e68-25df-466c-a69b-d18bdb1931c3.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:58660 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:56952 - "POST /login HTTP/1.1" 200 OK
+INFO:     192.168.0.196:56953 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:56965 - "POST /login HTTP/1.1" 200 OK
+INFO:     192.168.0.196:56966 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:56968 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57022 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57023 - "GET /media/fb2e1d68-2ecb-45bc-ba09-479ea08947c1.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57027 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57028 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 206 Partial Content
+INFO:     192.168.0.196:57028 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 206 Partial Content
+INFO:     192.168.0.196:57030 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:57032 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64876 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64886 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64888 - "GET /media/47b37f82-46f0-4cbc-9795-f587624bbb0c.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64892 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64895 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64940 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:64945 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:65121 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:65197 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:65199 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:61196 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53416 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53467 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53469 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53499 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53501 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53503 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53504 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53505 - "GET /media/82b2459b-fd22-4c4c-9bf0-fd7f97d053c8.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53505 - "GET /media/829261e3b76b2eee3c388f4f1041302b.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53505 - "GET /media/8f76b6af-3320-4fd5-ae27-f11dd46037ba.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53513 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53517 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53520 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53522 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53540 - "POST /login HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53541 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53545 - "POST /upload HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53556 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.196:53557 - "GET /media/599564ef-79c6-4b13-95af-f2ef2cfa1009.jpeg HTTP/1.1" 200 OK
+INFO:     Started server process [18196]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 98] error while attempting to bind on address ('0.0.0.0', 8000): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     192.168.0.199:53558 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44500 - "POST /login HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44516 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44560 - "GET /media/fb2e1d68-2ecb-45bc-ba09-479ea08947c1.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/SmartSelect_20250326_112009_Gallery.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44526 - "GET /media/fb2e1d68-2ecb-45bc-ba09-479ea08947c1.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44538 - "GET /media/82b2459b-fd22-4c4c-9bf0-fd7f97d053c8.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44568 - "GET /media/VID_20250401_022137_943.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44538 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44526 - "GET /media/20250401_122826.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/47b37f82-46f0-4cbc-9795-f587624bbb0c.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/IMG_20250404_171213_092.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/SmartSelect_20250404_171200.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/IMG-20250223-WA0000.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/1e047e68-25df-466c-a69b-d18bdb1931c3.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/829261e3b76b2eee3c388f4f1041302b.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/599564ef-79c6-4b13-95af-f2ef2cfa1009.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/Screenshot_20250331_205759_galleryAI_diplom.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/YA.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/20250304_151634.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44526 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:34934 - "GET /media/8f76b6af-3320-4fd5-ae27-f11dd46037ba.jpeg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:34938 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43950 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:34934 - "GET /media/SmartSelect_20250326_112009_Gallery.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43952 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43964 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44568 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:32816 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:32806 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:32824 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44546 - "GET /media/20250301_212439.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:32834 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:32848 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:34938 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:32858 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:58642 - "GET /media/VID_20250310_062233_804.mp4 HTTP/1.1" 200 OK
+INFO:     192.168.0.199:58644 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43952 - "GET /media/20250219_125445.jpg HTTP/1.1" 200 OK
+INFO:     192.168.0.199:44696 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:52804 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:57752 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:55534 - "GET /media HTTP/1.1" 200 OK
+INFO:     192.168.0.199:43398 - "GET /media HTTP/1.1" 200 OK
